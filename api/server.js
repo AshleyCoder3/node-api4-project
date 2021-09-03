@@ -19,7 +19,10 @@ server.use('/api', companionRouter)
 
 server.get('/', (req, res) => {
     res.json({
-        message: 'Doctor Who companions'
+        message: 'Doctor Who companions',
+        devMessage: 'try /api/companions',
+        devMessage2: 'try /api/register',
+        devMessage3: 'try /api/login'
     })
 })
 // server.get('*', (req, res) => {

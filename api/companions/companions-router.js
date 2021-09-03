@@ -9,10 +9,16 @@ router.get('/companions', (req, res, next) => {
         next(err)
     }
 })
-
 router.post('/register', (req, res, next) => {
     try {
         res.json(Companion.insert(req.body))
+    } catch (err) {
+        next(err)
+    }
+})
+router.post('/login', (req, res, next) => {
+    try {
+        res.json(Companion.login(req.body))
     } catch (err) {
         next(err)
     }
